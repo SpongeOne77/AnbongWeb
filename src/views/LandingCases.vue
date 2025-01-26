@@ -88,7 +88,7 @@ const data = [
   .case-icon-item_picture {
     overflow: hidden;
     display: block;
-    transition: transform 1s ease; /* 添加过渡效果 */
+    transition: transform 1s ease;
     &:hover {
       transform: scale(1.1);
     }
