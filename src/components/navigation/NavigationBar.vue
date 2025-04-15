@@ -29,12 +29,12 @@ const data = [
     {
     title: '新闻资讯',
     translation: 'NEWS',
-    path: '/'
+    path: '/newsPage'
   },
     {
     title: '联系我们',
     translation: 'CONTACTUS',
-    path: '/'
+    path: '/contactUs'
   }
 ]
 

@@ -6,7 +6,7 @@ const description = '目前企业业务已在国内外制造业、银行业、�
 </script>
 <template>
   <div class="w-full case_bg flex justify-center items-center">
-    <div class="w-4/5 flex flex-col justify-center items-center">
+    <div class="w-3/5 flex flex-col justify-center items-center">
       <div class="text-white text-base">{{ description }}</div>
       <n-carousel
         :slides-per-view="3"
@@ -15,7 +15,7 @@ const description = '目前企业业务已在国内外制造业、银行业、�
         show-arrow
       >
         <n-carousel-item v-for="(item, index) in 6" class="my-10">
-          <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg">
+          <img class="carousel-img" src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg" alt="">
           <div class="bg-white h-8 text-center">xxxxxx项目</div>
         </n-carousel-item>
       </n-carousel>
@@ -49,6 +49,7 @@ const description = '目前企业业务已在国内外制造业、银行业、�
 
 .carousel-img {
   height: 240px;
+  width: 100%;
   object-fit: cover;
 }
 .btn {

@@ -4,7 +4,7 @@ const pageConfig = {
   bannerUrl: 'src/assets/banner_2.jpg',
   title: '解决方案',
   translation: 'SOLUTIONS'
-} as {}
+}
 
 const data = [
   {
@@ -30,7 +30,6 @@ const getDay = (date: string):string => {
 const getMonth = (date: string):string => {
   return date.slice(0, 7);
 }
-
 </script>
 
 <template>
@@ -52,17 +51,14 @@ const getMonth = (date: string):string => {
         <div class="text-6 font-bold">解决方案</div>
         <div class="bg-gray-300 h-0.5 w-full my-2"></div>
         <div class="py-5 flex items-center justify-between select-none cursor-pointer solution-card" v-for="(item, index) in data">
-          <div class="h-50 w-50 solution-card_picture_container">
-            <img class="h-50 w-50 solution-card_picture_inner" :src="`${item.url}`"  alt=""/>
-          </div>
-          <div class="w-3/5">
-            <div class="text-5">{{ item.name }}</div>
-            <div class="text-4 text-slate-500 leading-7 truncate-lines">{{ item.description }}</div>
-            <div class="mt-5 h-8 w-25 border-solid border-gray flex justify-center items-center solution-card_button">查看详情</div>
-          </div>
           <div class="w-30 h-40 bg-slate-200 flex flex-col justify-center items-center solution-card_date">
             <div class="text-12 font-bold">{{ getDay(item.date) }}</div>
             <div>{{ getMonth(item.date) }}</div>
+          </div>
+          <div class="w-4/5">
+            <div class="text-5">{{ item.name }}</div>
+            <div class="text-4 text-slate-500 leading-7 truncate-lines">{{ item.description }}</div>
+            <div class="mt-5 h-8 w-25 border-solid border-gray flex justify-center items-center solution-card_button">查看详情</div>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ defineProps<{
   title: string;
   translation?: string;
   path?: string;
-}>()
+}>();
 
 </script>
 <template>
@@ -13,7 +13,7 @@ defineProps<{
       <div class="text-white absolute bottom-0 left-0 h-40 w-40 p-10 text-8">{{ title }}<br>{{ translation }}</div>
       <div>{{ path }}</div>
     </div>
-    <div>
+    <div class="content">
       <slot></slot>
     </div>
     <div>
@@ -21,4 +21,10 @@ defineProps<{
     </div>
   </div>
 </template>
-<style scoped></style>
+<style lang="css" scoped>
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+</style>

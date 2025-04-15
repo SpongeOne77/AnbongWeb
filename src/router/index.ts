@@ -26,6 +26,16 @@ const router = createRouter({
       path: '/landingCases',
       name: 'landingCases',
       component: () => import('../views/LandingCases.vue'),
+    },
+    {
+      path: '/newsPage',
+      name: 'newsPage',
+      component: () => import('../views/NewsPage.vue'),
+    },
+    {
+      path: '/contactUs',
+      name: 'contactUs',
+      component: () => import('../views/ContactUs.vue'),
     }
   ]
 })

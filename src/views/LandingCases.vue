@@ -57,7 +57,7 @@ const data = [
     :translation='pageConfig.translation'
   >
     <div class="p-8 flex justify-between">
-      <div class="w-60">
+      <div class="w-60 mr-30">
         <div class="h-20 bg-blue-500 text-white text-6 font-bold flex justify-center items-center">{{ pageConfig.title }}</div>
         <div class="h-15 bg-gray-200 text-4 flex justify-center items-center cursor-pointer">
           方案展示

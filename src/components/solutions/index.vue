@@ -1,5 +1,8 @@
 <script setup>
 import {ref} from "vue";
+import {useRouter} from "vue-router";
+
+const router = useRouter();
 
 const solutions = [
   {
@@ -37,6 +40,10 @@ const onHoverTag = (item, index) => {
   curIndex.value = index + 1;
   curItem.value = item;
 }
+
+const handleMoreSolution = () => {
+  router.push({path: '/solutions',})
+}
 </script>
 <template>
   <div class="h-180 w-full solution_bg">
@@ -55,7 +62,7 @@ const onHoverTag = (item, index) => {
       <div class="w-60 flex flex-col justify-between">
         <div class="text-8">{{ curItem.title }}</div>
         <div class="solution_description">{{ curItem.description }}</div>
-        <div class="h-10 w-40 bg-blue flex justify-center items-center text-white ">查看更多</div>
+        <div class="h-10 w-40 bg-blue flex justify-center items-center text-white cursor-pointer" @click="handleMoreSolution">查看更多</div>
       </div>
     </div>
     <div class="flex justify-center">
